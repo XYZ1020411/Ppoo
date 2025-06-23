@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簽到系統服務條款</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .accept-section {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .checkbox-label {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+        .button-decline {
+            background-color: #e74c3c;
+        }
+        .button-decline:hover {
+            background-color: #c0392b;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .last-updated {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 30px;
+        }
+        .nav-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="terms.html">服務條款</a>
+            <a href="privacy.html">隱私權政策</a>
+        </div>
+        
+        <h1>簽到系統服務條款</h1>
+        
+        <p>歡迎使用我們的簽到系統服務。請仔細閱讀以下服務條款，這些條款規範您對本服務的使用。使用本服務即表示您同意遵守這些條款。</p>
+        
+        <h2>1. 服務說明</h2>
+        <p>本簽到系統提供以下功能：</p>
+        <ul>
+            <li>用戶註冊與登錄</li>
+            <li>每日簽到記錄</li>
+            <li>簽到歷史查詢</li>
+            <li>簽到統計與報表</li>
+        </ul>
+        
+        <h2>2. 用戶義務</h2>
+        <ol>
+            <li>您同意提供真實、準確、完整的註冊信息。</li>
+            <li>您不得使用本系統進行任何非法或不當活動。</li>
+            <li>您應妥善保管您的帳號和密碼，不得將其轉讓或出借給他人使用。</li>
+            <li>您不得嘗試通過任何方式干擾或破壞本系統的正常運行。</li>
+        </ol>
+        
+        <h2>3. 服務變更與終止</h2>
+        <p>我們保留以下權利：</p>
+        <ol>
+            <li>隨時修改或中斷服務而無需事先通知。</li>
+            <li>在發現用戶違反本條款時，暫停或終止其使用權限。</li>
+            <li>定期或不定期對系統進行維護或升級。</li>
+        </ol>
+        
+        <h2>4. 免責聲明</h2>
+        <p>本服務按"現狀"提供，我們不保證：</p>
+        <ul>
+            <li>服務將不間斷或無錯誤。</li>
+            <li>服務結果的準確性或可靠性。</li>
+            <li>服務將滿足您的特定需求。</li>
+        </ul>
+        <p>對於因使用本服務而導致的任何直接或間接損失，我們不承擔責任。</p>
+        
+        <h2>5. 條款修改</h2>
+        <p>我們有權隨時修改本條款，修改後的條款將在公布後生效。您應定期查閱本條款以了解變更。</p>
+        
+        <div class="accept-section">
+            <input type="checkbox" id="accept-terms" name="accept-terms">
+            <label for="accept-terms" class="checkbox-label">我已閱讀並同意上述服務條款</label>
+            <div>
+                <button class="button" onclick="acceptTerms()">同意並繼續</button>
+                <button class="button button-decline" onclick="declineTerms()">不同意</button>
+            </div>
+        </div>
+        
+        <div class="last-updated">
+            最後更新日期：2023年11月15日
+        </div>
+    </div>
+
+    <script>
+        function acceptTerms() {
+            const checkbox = document.getElementById('accept-terms');
+            if (checkbox.checked) {
+                alert('感謝您接受服務條款，即將為您導向簽到系統。');
+                // 這裡可以添加實際的導向代碼，例如：
+                // window.location.href = "signin.html";
+            } else {
+                alert('請先勾選同意服務條款。');
+            }
+        }
+        
+        function declineTerms() {
+            if (confirm('您必須同意服務條款才能使用本系統。確定要離開嗎？')) {
+                // 這裡可以添加實際的離開處理代碼
+                alert('您已拒絕服務條款，將返回首頁。');
+                // window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+          </html>
